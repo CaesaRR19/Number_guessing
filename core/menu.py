@@ -23,19 +23,19 @@ def menu():
     option = input(
         f"{Style.BRIGHT}Argh! select an option, you rascal! {Style.RESET_ALL}"
     )
-
-    if option == "1":
-        start_game()
-    elif option == "2":
-        difficulty_menu()
-    elif option == "3":
-        print(
-            f"{Fore.LIGHTBLUE_EX}{Style.BRIGHT}See you on another adventure, buccaneer!"
-        )
-        return True
-    else:
-        print(
-            f"{Fore.RED}{Style.BRIGHT}Argh! Select a valid option or I'll make you walk the plank!"
-        )
-        input("")
+    match option:
+        case "1":
+            start_game()
+        case "2":
+            difficulty_menu()
+        case "3":
+            print(
+                f"{Fore.LIGHTBLUE_EX}{Style.BRIGHT}See you on another adventure, buccaneer!"
+            )
+            return True
+        case _:
+            print(
+                f"{Fore.RED}{Style.BRIGHT}Argh! Select a valid option or I'll make you walk the plank!"
+            )
+            input("")
     return False

@@ -1,7 +1,11 @@
 from os import system
 from colorama import init, Fore, Style
+from random import randint
+from clues import clue
 
 init(True)
+
+
 def start_game():
     system("cls")
     print(
@@ -13,6 +17,8 @@ A voice proclaimed, a challenge set, a number to unbound.
 Time's the key to fortunes grand, in this enigmatic cast."
         """
     )
-    
+    mystical_number = randint(1, 100)
+    guessing = input(
+        f"{Style.BRIGHT}Arr, tell me what the mystic number is. I'll give you a hint, you rascal: {clue()} -> {Style.RESET_ALL}"
+    )
 
-start_game()

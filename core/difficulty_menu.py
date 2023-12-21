@@ -3,6 +3,7 @@ from colorama import init, Fore, Style
 
 init(True)
 
+
 def difficulty_menu():
     system("cls")
     print(
@@ -17,20 +18,20 @@ def difficulty_menu():
     """
     )
     option = input(
-        f"{Style.BRIGHT}Argh! select a difficulty, you rascal! (Or press enter to exit this menu) \
-            {Style.RESET_ALL}"
+        f"{Style.BRIGHT}Argh! select a difficulty, you rascal! (Or press enter to exit this menu) {Style.RESET_ALL}"
     )
-    if option == "1":
-        pass
-    elif option == "2":
-        pass
-    elif option == "3":
-        pass
-    elif option == "":
-        pass
-    else:
-        print(
-            f"{Fore.RED}{Style.BRIGHT}Argh! Select a valid difficulty or I'll make you walk the \
-                plank!"
-        )
-        input("")
+
+    match option:
+        case "1":
+            pass
+        case "2":
+            pass
+        case "3":
+            pass
+        case "":
+            pass
+        case _:
+            print(
+                f"{Fore.RED}{Style.BRIGHT}Argh! Select a valid difficulty or I'll make you walk the plank!"
+            )
+            input("")
