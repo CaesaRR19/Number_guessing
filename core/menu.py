@@ -1,5 +1,6 @@
-from colorama import init, Fore, Style
 from os import system
+from colorama import init, Fore, Style
+from difficulty_menu import difficulty_menu
 
 init(True)
 
@@ -24,8 +25,11 @@ def menu():
     if option == "1":
         print("q")
     elif option == "2":
-        print("q")
+        difficulty_menu()
     elif option == "3":
+        print(
+            f"{Fore.LIGHTBLUE_EX}{Style.BRIGHT}See you on another adventure, buccaneer!"
+        )
         return True
     else:
         print(
