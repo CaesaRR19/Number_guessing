@@ -1,6 +1,8 @@
 from os import system
 from colorama import init, Fore, Style
 from difficulty_menu import difficulty_menu
+from start_game import start_game
+
 
 init(True)
 
@@ -23,7 +25,7 @@ def menu():
     )
 
     if option == "1":
-        print("q")
+        start_game()
     elif option == "2":
         difficulty_menu()
     elif option == "3":
