@@ -17,8 +17,10 @@ A voice proclaimed, a challenge set, a number to unbound.
 Time's the key to fortunes grand, in this enigmatic cast."
         """
     )
-    mystical_number = randint(1, 100)
+    mystic_number = randint(1, 100)
     guessing = input(
-        f"{Style.BRIGHT}Arr, tell me what the mystic number is. I'll give you a hint, you rascal: {clue()} -> {Style.RESET_ALL}"
+        f"{Style.BRIGHT}Arr, tell me what the mystic number is. I'll give you a hint, you rascal: {clue(mystic_number)} -> {Style.RESET_ALL}"
     )
+    
+
 
